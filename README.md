@@ -4,6 +4,10 @@ A learning journey through multi-agent LLM orchestration, building progressively
 
 All three projects use **Claude Haiku 4.5** as the underlying LLM.
 
+> **🤖 Try the live Telegram bot:** [@TruthComitteeBot](https://t.me/TruthComitteeBot)
+>
+> Send it a controversial claim or a numeric question. The Chief Editor will dispatch the Investigator, hand the file to the Analyst, crunch numbers with the Calculator, and deliver a verdict — narrating each step. Running 24×7 on a Google Cloud free-tier VM.
+
 ## What's in here
 
 | File | What it is | Stack |
