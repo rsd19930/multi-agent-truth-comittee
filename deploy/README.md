@@ -36,8 +36,8 @@ In the SSH session, paste:
 
 ```bash
 # Replace <REPO_URL> with your GitHub repo URL, e.g. https://github.com/you/multi-agents-learning.git
-curl -sSL https://raw.githubusercontent.com/<USER>/<REPO>/main/deploy/setup.sh \
-  | bash -s -- https://github.com/<USER>/<REPO>.git
+curl -sSL https://raw.githubusercontent.com/rsd19930/multi-agent-truth-comittee/main/deploy/setup.sh \
+  | bash -s -- https://github.com/rsd19930/multi-agent-truth-comittee.git
 ```
 
 The script will:
