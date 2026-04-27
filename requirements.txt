@@ -1,0 +1,7 @@
+crewai[anthropic]
+crewai-tools
+langchain-community
+ddgs
+python-dotenv
+anthropic
+python-telegram-bot[ext]>=20

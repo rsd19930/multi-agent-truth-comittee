@@ -1,0 +1,29 @@
+[Unit]
+Description=Truth Committee Telegram Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# These three lines are rewritten by deploy/setup.sh to match the actual user
+# and home directory on the VM. Don't edit by hand here unless you know what
+# you're doing.
+User=__USER__
+WorkingDirectory=__HOME__/multi-agents-learning
+EnvironmentFile=__HOME__/multi-agents-learning/.env
+
+ExecStart=__HOME__/multi-agents-learning/.venv/bin/python TruthComitteeBot.py
+
+# Restart on failure, with a backoff so a crashloop doesn't hammer Telegram.
+Restart=on-failure
+RestartSec=10
+StartLimitIntervalSec=300
+StartLimitBurst=10
+
+# Send all stdout/stderr to journald so `journalctl -u truth-committee-bot -f`
+# shows the bot's logs.
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
